@@ -1,0 +1,109 @@
+#drum-machine {
+  text-align: center;
+  padding: 30px;
+  background: radial-gradient(circle, #ff007f, #ff8c00, #00ff9d);
+  border-radius: 15px;
+  width: 320px;
+  margin: auto;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+  transform: rotate(-5deg);
+  position: relative;
+}
+
+#display {
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-weight: bold;
+  color: #ffff00;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 25px #ff00ff, 0 0 5px #ff0000;
+  animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+  }
+  100% {
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+  }
+}
+
+#pads {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.drum-pad {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  font-size: 36px;
+  font-family: "Impact", sans-serif;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  text-transform: uppercase;
+}
+
+.drum-pad:active {
+  background-color: #f44336;
+  box-shadow: 0px 5px 15px rgba(255, 0, 0, 0.6);
+  transform: scale(1.1);
+}
+
+.drum-pad:hover {
+  background-color: #ffeb3b;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  transform: translateY(-4px);
+}
+
+.drum-pad:focus {
+  outline: none;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+}
+
+#drum-machine {
+  background: linear-gradient(135deg, #00bcd4, #ff9800);
+  animation: psychedelic 3s infinite alternate;
+}
+
+@keyframes psychedelic {
+  0% {
+    transform: rotate(0deg);
+    background: linear-gradient(135deg, #00bcd4, #ff9800);
+  }
+  50% {
+    transform: rotate(10deg);
+    background: linear-gradient(135deg, #9c27b0, #f44336);
+  }
+  100% {
+    transform: rotate(-10deg);
+    background: linear-gradient(135deg, #8bc34a, #ffeb3b);
+  }
+}
+
+#container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#cat-image-1 {
+  max-width: 150px; /* Adjust size as needed */
+  margin-right: 10px;
+}
+
+#cat-image-2 {
+  max-width: 150px; /* Adjust size as needed */
+  margin-left: 10px;
+}
+
+#root {
+  flex-grow: 1;
+  text-align: center;
+}

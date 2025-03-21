@@ -1,0 +1,135 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Helvetica", sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 10px;
+  overflow: hidden;
+  background-image: linear-gradient(45deg, #f79c42, #f06b6b, #72a6e3);
+  background-size: 300% 300%;
+  animation: gradientBG 6s ease infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Quote Box Styling */
+#quote-box {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  padding: 40px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Helvetica", sans-serif;
+  border: 5px solid #f06b6b;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Quote and Author Styling */
+#text {
+  font-size: 1.8rem;
+  color: #f06b6b;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#author {
+  font-size: 1.2rem;
+  color: #3498db;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styling */
+#new-quote {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+}
+
+#new-quote:hover {
+  background-color: #e74c3c;
+  transform: scale(1.1); /* Funky hover effect */
+}
+
+#new-quote:active {
+  transform: scale(1); /* When clicked */
+}
+
+/* Twitter Button Styling */
+#tweet-quote {
+  color: #1da1f2;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+#tweet-quote:hover {
+  background-color: #1da1f2;
+  color: white;
+}
+
+#tweet-quote:active {
+  transform: scale(0.98); /* Slight shrink when clicked */
+}
+
+/* Quote box bounces in at load */
+@keyframes bounceIn {
+  0% {
+    transform: translateY(-2000px);
+  }
+  60% {
+    transform: translateY(30px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#quote-box {
+  animation: bounceIn 1s ease;
+}
